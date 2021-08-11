@@ -1,4 +1,4 @@
-FROM quay.io/openshift/origin-cli:4.2.0
+FROM quay.io/openshift/origin-cli:4.9.0
 
 ARG ocpythonlibver=0.8.6
 
