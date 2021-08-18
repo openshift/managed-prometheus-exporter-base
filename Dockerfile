@@ -1,13 +1,13 @@
 FROM quay.io/openshift/origin-cli:4.9.0
 
-ARG ocpythonlibver=0.8.6
+ARG ocpythonlibver=0.12.1
 
 # Dependencies for openshift-restclient-python.
 RUN \
   cd /tmp && \
   curl -s -L https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
   python /tmp/get-pip.py && \
-  pip install setuptools==40.8.0 urllib3==1.24.1 chardet==3.0.4 requests==2.21.0
+  pip install "setuptools>=40.3.0" urllib3 chardet requests
 
 # Install restclient from source
 RUN \
