@@ -18,7 +18,7 @@ all: docker-build
 
 .PHONY: clean docker-build docker-push
 clean:
-	docker rmi $(IMG) || true
+	docker rmi $(IMG) $(IMG_LATEST) || true
 
 docker-build: clean
 	docker build -t $(IMG) -f Dockerfile .
