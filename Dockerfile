@@ -1,7 +1,7 @@
-FROM registry.access.redhat.com/ubi8/ubi-minimal:8.4-208
+FROM registry.access.redhat.com/ubi8/ubi-minimal:8.5-230
 
 
-ARG ocpythonlibver=0.12.1
+ARG ocpythonlibver=0.13.1
 
 
 RUN microdnf install -y python39 tar gzip && microdnf clean all
