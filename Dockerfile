@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/ubi-minimal:8.5-230
+FROM registry.access.redhat.com/ubi8/ubi-minimal:8.5-240.1648458092
 
 
 ARG ocpythonlibver=0.13.1
@@ -18,4 +18,3 @@ RUN \
 RUN  pip3 install prometheus_client paramiko pyyaml boto3 slackclient && mkdir /openshift-python
 
 CMD [ "/bin/sh" ]
-
