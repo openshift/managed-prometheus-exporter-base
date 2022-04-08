@@ -4,7 +4,7 @@ FROM registry.access.redhat.com/ubi8/ubi-minimal:8.5-240.1648458092
 ARG ocpythonlibver=0.13.1
 
 
-RUN microdnf install -y  python39 tar gzip && microdnf clean all
+RUN microdnf install -y python39 tar gzip && microdnf clean all
 
 RUN pip3 install "setuptools>=40.3.0" urllib3 chardet requests
 
